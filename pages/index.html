@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado Gringo's</title>
+    <!-- Enlace a tu archivo de estilos CSS estándar -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Enlace al favicon -->
+    <link rel="shortcut icon" href="./assets/img/logo_Gringo's.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img class="logo" src="./assets/img/logo_Gringo's.jpg" alt="logo de la empresa">
+        <h1>Gringo's Online</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="ofertas.html">Ofertas</a>
+        <a href="carrito.html">Carrito</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="login.html">Iniciar Sesión</a>
+    </nav>
+    
+    <section class="section-index">
+        <h2>¡Todo lo que buscas, en el momento justo!</h2>
+    </section>
+
+    <main>
+        <h2>Ofertas</h2>
+        
+        <!-- INICIO: Modificación para el Carrusel -->
+        <div class="carousel-container">
+            <div class="carousel-slides">
+                <!-- Cada 'oferta-grid' ahora representa un slide del carrusel -->
+                <div class="oferta-grid carousel-slide">
+                    <div class="oferta-tarjeta">
+                        <img src="https://picsum.photos/300/200?random=1" alt="imagen de producto en oferta">
+                        <div class="oferta-info">
+                            <p class="oferta-titulo">Oferta 1</p>
+                            <p class="precio">$1.500</p>
+                            <button class="btn-comprar">Comprar</button>
+                        </div>
+                    </div>
+                    
+                    <div class="oferta-tarjeta">
+                        <img src="https://picsum.photos/300/200?random=2" alt="imagen de producto en oferta">
+                        <div class="oferta-info">
+                            <p class="oferta-titulo">Oferta 2</p>
+                            <p class="precio">$1.800</p>
+                            <button class="btn-comprar">Comprar</button>
+                        </div>
+                    </div>
+
+                    <div class="oferta-tarjeta">
+                        <img src="https://picsum.photos/300/200?random=3" alt="imagen de producto en oferta">
+                        <div class="oferta-info">
+                            <p class="oferta-titulo">Oferta 3</p>
+                            <p class="precio">$1.200</p>
+                            <button class="btn-comprar">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="oferta-grid carousel-slide">
+                    <div class="oferta-tarjeta">
+                        <img src="https://picsum.photos/300/200?random=4" alt="imagen de producto en oferta">
+                        <div class="oferta-info">
+                            <p class="oferta-titulo">Oferta 4</p>
+                            <p class="precio">$950</p>
+                            <button class="btn-comprar">Comprar</button>
+                        </div>
+                    </div>
+                    
+                    <div class="oferta-tarjeta">
+                        <img src="https://picsum.photos/300/200?random=5" alt="imagen de producto en oferta">
+                        <div class="oferta-info">
+                            <p class="oferta-titulo">Oferta 5</p>
+                            <p class="precio">$2.100</p>
+                            <button class="btn-comprar">Comprar</button>
+                        </div>
+                    </div>
+
+                    <div class="oferta-tarjeta">
+                        <img src="https://picsum.photos/300/200?random=6" alt="imagen de producto en oferta">
+                        <div class="oferta-info">
+                            <p class="oferta-titulo">Oferta 6</p>
+                            <p class="precio">$780</p>
+                            <button class="btn-comprar">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Puedes agregar más .carousel-slide con .oferta-grid dentro si tienes más grupos de 3 ofertas -->
+            </div>
+
+            <!-- Controles del carrusel -->
+            <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
+            <button class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
+
+            <!-- Paginación del carrusel -->
+            <div class="carousel-dots">
+                <!-- Los puntos se generarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+        <!-- FIN: Modificación para el Carrusel -->
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="current-year"></span> Gringo's - Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Custom Message Modal (oculto por defecto) -->
+    <div id="custom-modal" class="modal hidden">
+        <div class="modal-content">
+            <p id="modal-message"></p>
+            <button id="modal-close-btn" class="modal-close-btn">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="/css/styles.css"> </head>
+<body>
+    <header>
+        <img class="logo" src="/assets/img/logo_Gringo's.jpg" alt="logo de la empresa">
+        <h1>Gringo's Online</h1>
+    </header>
+        <nav>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="ofertas.html">Ofertas</a>
+        <a href="carrito.html">Carrito</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="login.html">Iniciar Sesión</a>
+    </nav>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form action="login.php" method="POST">
+            <label for="usuario">Usuario</label>
+            <input type="usuario" name="usuario" id="usuario" required>
+            
+            <label for="password">Contraseña</label>
+            <input type="password" name="password" id="password" required>
+            
+            <button type="submit" name="login">Ingresar</button>
+        </form>
+        <p>¿No tienes cuenta? <a href="register.html">Regístrate aquí</a></p>
+    </div>
+</body>
+</html>
