@@ -2,7 +2,7 @@
 ## Gringo's - Supermercado online ##
 ## -------------------------------##
 
-@Autores: Martin Sonda
+@Autores: Brandi Maximo, Cionna Ernesto, Islas Florencia, Olivera Ailén, Sonda Martin
 @Fecha creación: 25/05/2025
 @Proyecto: Diseño Web
 
