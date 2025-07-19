@@ -26,7 +26,6 @@ El objetivo es crear el sitio online de un supermercado para que los clientes pu
 ├── pages/
 │   ├── carrito.html
 │   ├── contacto.html
-│   ├── ofertas.html
 │   └── productos.html
 ├── script.js
 └── index.html
