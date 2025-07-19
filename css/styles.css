@@ -1,3 +1,4 @@
+
 * {
     padding: 0;
     margin: 0;
@@ -9,9 +10,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(255, 255, 255);
     background-image: linear-gradient(to right top, #249a21, #228a20, #217a1f, #1f6b1d, #1d5c1b);
-    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
-    display: flex;
-    flex-direction: column;
 }
 
 header {
@@ -43,83 +41,11 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* --- Estilos para el login --- */
-.login-container {
-    background-color: #fff;
-    padding: 2.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    max-width: 400px;
-    width: 90%;
-    margin: 3rem auto; /* Centra el contenedor de login y añade espacio */
-    color: #333; /* Color de texto para el contenido del login */
-}
-
-.login-container h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #236a21; /* Color verde para el título */
-}
-
-.login-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem; /* Espacio entre los elementos del formulario */
-}
-
-.login-container label {
-    text-align: left;
-    font-weight: bold;
-    margin-bottom: 0.25rem;
-}
-
-.login-container input[type="usuario"],
-.login-container input[type="password"] {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.login-container button[type="submit"] {
-    background-color: #249a21;
-    color: white;
-    padding: 1rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 1rem;
-}
-
-.login-container button[type="submit"]:hover {
-    background-color: #1d5c1b;
-}
-
-.login-container p {
-    margin-top: 1.5rem;
-    font-size: 0.95rem;
-}
-
-.login-container p a {
-    color: #249a21;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.login-container p a:hover {
-    text-decoration: underline;
-}
-/* --- Fin de estilos para el login --- */
-
 
 .section-index {
     position: relative;
     height: 30vh;
-    background-image: url('../assets/img/gringo\'s_foto_fachada.png');
+    background-image: url('../assets/img/gringo\'s_foto_fachada.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -163,7 +89,7 @@ main {
 
 .oferta-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Corrección de minmax */
+    grid-template-columns: repeat(auto-fit, minmax(300, 1fr));
     gap: 1.5rem;
     justify-content: center;
 }
@@ -220,11 +146,11 @@ main {
 }
 
 footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: auto; /* Empuja el footer hacia abajo */
+background: #333;
+color: white;
+text-align: center;
+padding: 1.5rem;
+margin-top: 2.5rem;
 }
 
 /* ############## */
@@ -291,7 +217,7 @@ footer {
 
 .section-formulario {
     max-width: 800px;
-    margin: 3rem auto;   /* Centra la sección del margen sup/inf */
+    margin: 3rem auto;  /* Centra la sección del margen sup/inf */
     padding: 2.5rem;
     background-color: #f8f8f8;
     border-radius: 10px;
@@ -318,8 +244,8 @@ footer {
 
 .section-formulario form {
     display: grid;
-    grid-template-columns: 1fr;   /* Por defecto una sola col */
-    gap: 1.5rem;   
+    grid-template-columns: 1fr;  /* Por defecto una sola col */
+    gap: 1.5rem;  
     text-align: left; 
 }
 
@@ -372,11 +298,11 @@ footer {
 @media (min-width: 768px) {
 
     .section-formulario form {
-        grid-template-columns: 1fr 1fr;   /* Dos col */
+        grid-template-columns: 1fr 1fr;  /* Dos col */
     }
 
     .btn-submit {
-        grid-column: span 2; /* Cambiado para que el botón ocupe las dos columnas */
+        grid-template-columns: 1;
     }
     
 }
@@ -401,4 +327,154 @@ footer {
         padding: 12px 20px;
     }
     
+}
+
+
+.formulario-contacto {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.formulario-contacto label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.formulario-contacto button {
+  padding: 0.8rem 1.5rem;
+  background-color: #357edd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+  background-color: #245bb5;
+}
+
+
+
+/* 🌟 Estilo para la tabla del carrito */
+#contenedor-carrito table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contenedor-carrito th,
+#contenedor-carrito td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  color: #333
+}
+
+#contenedor-carrito thead {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+#contenedor-carrito tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* 🌟 Botones de + y – */
+#contenedor-carrito button.sumar,
+#contenedor-carrito button.restar {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 2px;
+  transition: background-color 0.3s ease;
+}
+
+#contenedor-carrito button.restar {
+  background-color: #e74c3c;
+}
+
+#contenedor-carrito button.sumar:hover {
+  background-color: #2980b9;
+}
+
+#contenedor-carrito button.restar:hover {
+  background-color: #c0392b;
+}
+
+/* 🌟 Total destacado */
+#total-carrito {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  display: block;
+  text-align: right;
+  color: #2c3e50;
+}
+
+/* 🟢 Responsive */
+@media (max-width: 768px) {
+  #contenedor-carrito table,
+  #contenedor-carrito thead,
+  #contenedor-carrito tbody,
+  #contenedor-carrito th,
+  #contenedor-carrito td,
+  #contenedor-carrito tr {
+    display: block;
+    width: 100%;
+  }
+
+  #contenedor-carrito tr {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+  }
+
+  #contenedor-carrito td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  #contenedor-carrito td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    width: 45%;
+    padding-right: 10px;
+    font-weight: bold;
+    text-align: left;
+    color: #444;
+  }
+
+  #contenedor-carrito thead {
+    display: none;
+  }
 }

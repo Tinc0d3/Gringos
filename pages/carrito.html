@@ -1,50 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito - Gringo's</title>
-    <!-- Enlace a tu archivo de estilos CSS estándar (ruta relativa desde pages/) -->
-    <link rel="stylesheet" href="../css/styles.css">
-    <!-- Enlace al favicon (ruta relativa desde pages/) -->
-    <link rel="shortcut icon" href="../assets/img/logo_Gringo's.jpg" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito - Gringo's</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="shortcut icon" href="../assets/img/logo_Gringo's.jpg" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <img class="logo" src="../assets/img/logo_Gringo's.jpg" alt="logo de la empresa">
-        <h1>Gringo's Online</h1>
-    </header>
-    
-    <nav>
-        <!-- Rutas relativas a index.html desde pages/ -->
-        <a href="index.html">Inicio</a>
-        <a href="productos.html">Productos</a>
-        <a href="carrito.html">Carrito</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="login.html">Iniciar Sesión</a>
-    </nav>
+  <header>
+    <img class="logo" src="../assets/img/logo_Gringo's.jpg" alt="logo de la empresa" />
+    <h1>Gringo's online</h1>
+  </header>
 
-    <main>
-        <section class="section-carrito">
-            <h2>Tu Carrito de Compras</h2>
-            <p>Tu carrito está vacío por ahora. ¡Explora nuestras ofertas y productos!</p>
-            <!-- Aquí, en un futuro, se podrían listar los productos del carrito -->
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; <span id="current-year"></span> Gringo's - Todos los derechos reservados</p>
-    </footer>
+  <nav>
+    <a href="../index.html">Inicio</a>
+    <a href="./productos.html">Productos</a>
+    <a href="./carrito.html">Carrito</a>
+    <a href="./contacto.html">Contacto</a>
+  </nav>
 
-    <!-- Custom Message Modal (oculto por defecto) -->
-    <div id="custom-modal" class="modal hidden">
-        <div class="modal-content">
-            <p id="modal-message"></p>
-            <button id="modal-close-btn" class="modal-close-btn">Cerrar</button>
-        </div>
+  <main class="carrito-main">
+    <h2>Carrito de compras</h2>
+
+    <div id="contenedor-carrito">
+      <!-- Productos se insertan con JS -->
     </div>
 
-    <!-- Enlace al archivo JavaScript (ruta relativa desde pages/) -->
-    <script src="../script.js"></script>
+    <div id="total-carrito" style="margin-top: 1rem; font-weight: bold;"></div>
+
+    <button id="btn-vaciar-carrito" style="margin-top: 1.5rem;">Vaciar carrito</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gringo's - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="../js/script.js"></script>
 </body>
 </html>

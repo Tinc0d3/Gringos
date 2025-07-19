@@ -1,109 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos - Gringo's</title>
-    <!-- Enlace a tu archivo de estilos CSS estándar (ruta relativa desde pages/) -->
-    <link rel="stylesheet" href="../css/styles.css">
-    <!-- Enlace al favicon (ruta relativa desde pages/) -->
-    <link rel="shortcut icon" href="../assets/img/logo_Gringo's.jpg" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos - Gringo's</title>
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header>
-        <img class="logo" src="../assets/img/logo_Gringo's.jpg" alt="logo de la empresa">
-        <h1>Gringo's Online</h1>
-    </header>
-    
-    <nav>
-        <!-- Rutas relativas a index.html desde pages/ -->
-        <a href="index.html">Inicio</a>
-        <a href="productos.html">Productos</a>
-        <a href="carrito.html">Carrito</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="login.html">Iniciar Sesión</a>
-    </nav>
+  <header>
+    <img class="logo" src="../assets/img/logo_Gringo's.jpg" alt="logo de la empresa">
+    <h1>Gringo's online</h1>
+  </header>
 
-    <main>
-        <h2>Nuestros Productos</h2>
-        
-        <div class="oferta-grid">
-            <!-- Tarjeta de Producto 1 -->
-            <div class="oferta-tarjeta">
-                <img src="https://picsum.photos/300/200?random=7" alt="imagen de producto">
-                <div class="oferta-info">
-                    <p class="oferta-titulo">Leche Entera 1L</p>
-                    <p class="precio">$900</p>
-                    <button class="btn-comprar">Añadir al Carrito</button>
-                </div>
-            </div>
-            
-            <!-- Tarjeta de Producto 2 -->
-            <div class="oferta-tarjeta">
-                <img src="https://picsum.photos/300/200?random=8" alt="imagen de producto">
-                <div class="oferta-info">
-                    <p class="oferta-titulo">Pan de Molde</p>
-                    <p class="precio">$750</p>
-                    <button class="btn-comprar">Añadir al Carrito</button>
-                </div>
-            </div>
+  <nav>
+    <a href="../index.html">Inicio</a>
+    <a href="./productos.html">Productos</a>
+    <a href="./carrito.html">Carrito</a>
+    <a href="./contacto.html">Contacto</a>
+  </nav>
 
-            <!-- Tarjeta de Producto 3 -->
-            <div class="oferta-tarjeta">
-                <img src="https://picsum.photos/300/200?random=9" alt="imagen de producto">
-                <div class="oferta-info">
-                    <p class="oferta-titulo">Aceite de Girasol</p>
-                    <p class="precio">$2.300</p>
-                    <button class="btn-comprar">Añadir al Carrito</button>
-                </div>
-            </div>
+  <main class="productos-contenedor">
+    <aside class="menu-categorias">
+      <h3>Categorías</h3>
+      <ul>
+        <li><button class="filtro-categoria" data-categoria="todos">Todos</button></li>
+        <li><button class="filtro-categoria" data-categoria="golosinas">Golosinas</button></li>
+        <li><button class="filtro-categoria" data-categoria="bebidas">Bebidas</button></li>
+        <li><button class="filtro-categoria" data-categoria="snacks">Snacks</button></li>
+      </ul>
+    </aside>
 
-            <!-- Tarjeta de Producto 4 -->
-            <div class="oferta-tarjeta">
-                <img src="https://picsum.photos/300/200?random=10" alt="imagen de producto">
-                <div class="oferta-info">
-                    <p class="oferta-titulo">Fideos Secos</p>
-                    <p class="precio">$550</p>
-                    <button class="btn-comprar">Añadir al Carrito</button>
-                </div>
-            </div>
-            
-            <!-- Tarjeta de Producto 5 -->
-            <div class="oferta-tarjeta">
-                <img src="https://picsum.photos/300/200?random=11" alt="imagen de producto">
-                <div class="oferta-info">
-                    <p class="oferta-titulo">Azúcar 1Kg</p>
-                    <p class="precio">$680</p>
-                    <button class="btn-comprar">Añadir al Carrito</button>
-                </div>
-            </div>
+    <section class="productos-listado">
+      <h2>Productos disponibles</h2>
+      <div id="contenedor-productos" class="productos-grid">
+        <!-- Productos cargados dinámicamente -->
+      </div>
+    </section>
+  </main>
 
-            <!-- Tarjeta de Producto 6 -->
-            <div class="oferta-tarjeta">
-                <img src="https://picsum.photos/300/200?random=12" alt="imagen de producto">
-                <div class="oferta-info">
-                    <p class="oferta-titulo">Café Molido 250g</p>
-                    <p class="precio">$1.850</p>
-                    <button class="btn-comprar">Añadir al Carrito</button>
-                </div>
-            </div>
-            <!-- Puedes añadir más tarjetas de productos aquí -->
-        </div>
-    </main>
-    
-    <footer>
-        <p>&copy; <span id="current-year"></span> Gringo's - Todos los derechos reservados</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Gringo's - Todos los derechos reservados</p>
+  </footer>
 
-    <!-- Custom Message Modal (oculto por defecto) -->
-    <div id="custom-modal" class="modal hidden">
-        <div class="modal-content">
-            <p id="modal-message"></p>
-            <button id="modal-close-btn" class="modal-close-btn">Cerrar</button>
-        </div>
-    </div>
-
-    <!-- Enlace al archivo JavaScript (ruta relativa desde pages/) -->
-    <script src="../script.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>
