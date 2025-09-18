@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById('custom-popup');
+  const closeBtn = document.getElementById('close-popup-btn');
+
+  // Lógica para mostrar y ocultar el pop-up
+  if (closeBtn && popup) {
+    closeBtn.addEventListener('click', () => {
+      popup.classList.remove('show');
+    });
+  }
+
   // 🔷 Carga de productos en productos.html
   const contenedorProductos = document.getElementById("contenedor-productos");
 
@@ -89,7 +99,13 @@ document.addEventListener("DOMContentLoaded", () => {
       carrito.push({ ...producto, cantidad: 1 });
     }
     localStorage.setItem("carrito", JSON.stringify(carrito));
-    alert("Producto agregado al carrito");
+    
+    // Muestra el pop-up en lugar del alert
+    if (popup) {
+        popup.classList.add('show');
+    } else {
+        console.error("Error: No se encontró el pop-up. Asegúrate de que el HTML esté en la página.");
+    }
   }
 
   // 🔷 Carrito en carrito.html
@@ -177,4 +193,5 @@ document.addEventListener("DOMContentLoaded", () => {
       renderizarCarrito();
     });
   }
+
 });
